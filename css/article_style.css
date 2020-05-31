@@ -1,0 +1,132 @@
+#blog_wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "hd hd hd hd hd sc sc"
+                         "lsd art art art art art rsd"
+                         "lsd art art art art art rsd"
+                         "lsd art art art art art rsd"
+                         "lsd art art art art art rsd"
+                         "lsd art art art art art rsd"
+                         "lsd art art art art art rsd"
+                         "ft ft ft ft ft ft ft";
+}
+
+#blog_container {
+    grid-area: art;
+    background-color: rgb(30, 42, 44);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+#article_title {
+    padding: 0px;
+}
+
+#pub_date {
+    padding-bottom: 10px;
+}
+
+#blog p {
+    text-indent: 30px;
+}
+
+#button_container {
+    margin-top: 20px;
+    position: relative;
+}
+
+#next_btn {
+    position: absolute;
+    right: 0;
+}
+
+#left_sidebar {
+    grid-area: lsd;
+    background-color: rgb(56, 121, 89);
+    display: block;
+    text-align: center;
+}
+
+#left_sidebar p {
+    margin-top: 5px;
+}
+
+#right_sidebar {
+    grid-area: rsd;
+    background-color: rgb(56, 121, 89);
+    display: block;
+    text-align: center;
+}
+#right_sidebar p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+#profile_pic {
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+#auth_name {
+    font-size: 20px;
+}
+
+#publish_info_520px {
+    display: none;
+}
+
+@media (max-width: 520px) {
+    #blog_wrapper {
+        display: block;
+    }
+
+    #publish_info_520px {
+        display: block;
+        text-align: center;
+        margin-top: 7px;
+        margin-bottom: 15px;
+    }
+
+    #auth_wrapper {
+        position: relative;
+        display: block;
+        text-align: center;
+    }
+
+    #profile_pic {
+        margin: 0;
+        position: absolute;
+        left: 135px;
+    }
+
+    #auth_name_520px, #pub_date_520px {
+        margin-left: 27px;
+    }
+
+    #left_sidebar, #pub_date {
+        display: none;
+    }
+
+    #article_title {
+        text-align: center;
+    }
+
+    #profile_pic {
+        height: 40px;
+        width: 40px;
+    }
+
+    #right_sidebar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #right_sidebar p {
+        margin: 0;
+    }
+}

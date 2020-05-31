@@ -1,0 +1,152 @@
+@import "tag_style.css";
+@import "article_style.css";
+@import "font_style.css";
+
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "hd hd hd hd hd sc sc"
+                         "sd main main main main main main"
+                         "sd main main main main main main"
+                         "sd main main main main main main"
+                         "sd main main main main main main"
+                         "sd main main main main main main"
+                         "sd main main main main main main"
+                         "sd main main main main main main"
+                         "sd main main main main main main"
+                         "sd main main main main main main"
+                         "sd main main main main main main"
+                         "ft ft ft ft ft ft ft";
+}
+
+.nav_links {
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+.body_link {
+    color: rgb(255, 255, 255);
+}
+
+.body_link:hover {
+    color: rgb(190, 17, 55)
+}
+
+#categories_header {
+    color: rgb(198, 207, 204)
+}
+
+#nav_container {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#social_container {
+    grid-area: sc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 12px;
+}
+
+#social_media_520px {
+    display: none;
+}
+
+.social_icon {
+    height: 75px;
+    width: 75px;
+}
+
+#sidebar {
+    grid-area: sd;
+    background-color: rgb(56, 121, 89);
+    padding: 25px;
+    text-align: left;
+}
+
+#cards_container {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(30, 42, 44);
+    padding: 50px;
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    height: 330px;
+    width: 300px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card:hover {
+    transition-duration: 1.5s;
+    background-color: rgb(64, 243, 183);
+    border-color: rgb(64, 243, 183);
+}
+
+.card_pic {
+    height: 250px;
+    width: 300px;
+}
+
+.card_pic_src {
+    font-size: 10px;
+}
+
+.card_title, .card_second_title,
+.card_pic_src {
+    margin: 0px;
+}
+
+.card_title {
+    padding-top: 8px;
+}
+
+#copyright_linking {
+    margin-top: 12px;
+}
+
+@media (max-width: 520px) {
+    #wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "hd hd hd hd"
+                             "bsm520 bsm520 bsm520 bsm520"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "main main main main"
+                             "ft ft ft ft";
+    }
+
+    #social_container, #sidebar {
+        display: none;
+    }
+    
+    #social_media_520px {
+        display: block;
+        text-align: center;
+        grid-area: bsm520;
+    }
+
+    #cards_container {
+        padding: 7px;
+    }
+}
